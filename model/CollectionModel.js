@@ -1,0 +1,86 @@
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
+
+let Collection = new Schema(
+  {
+    slug: { type: String, required: true },
+    snipe1: {
+      enabled: { type: Boolean, required: true, default: false },
+      snipeType: { type: String, enum: ["sol", "percent"], default: "sol" },
+      minPercentage: { type: Number, default: 0 },
+      maxPercentage: { type: Number, default: 0 },
+      rankingEngines: { type: [String], default: ["absRank"] },
+      belowRank: { type: String },
+      minSol: { type: Number, default: 0 },
+      maxSol: { type: Number, default: 1 },
+      quantity: { type: Number, default: 1 },
+      attributes: { type: [Schema.Types.Mixed], default: [] },
+      fast: { type: Boolean, default: false },
+    },
+    snipe2: {
+      enabled: { type: Boolean, required: true, default: false },
+      snipeType: { type: String, enum: ["sol", "percent"], default: "sol" },
+      minPercentage: { type: Number, default: 0 },
+      maxPercentage: { type: Number, default: 0 },
+      rankingEngines: { type: [String], default: ["absRank"] },
+      belowRank: { type: String },
+      minSol: { type: Number, default: 0 },
+      maxSol: { type: Number, default: 1 },
+      quantity: { type: Number, default: 1 },
+      attributes: { type: [Schema.Types.Mixed], default: [] },
+      fast: { type: Boolean, default: false },
+    },
+    snipe3: {
+      enabled: { type: Boolean, required: true, default: false },
+      snipeType: { type: String, enum: ["sol", "percent"], default: "sol" },
+      minPercentage: { type: Number, default: 0 },
+      maxPercentage: { type: Number, default: 0 },
+      rankingEngines: { type: [String], default: ["absRank"] },
+      belowRank: { type: String },
+      minSol: { type: Number, default: 0 },
+      maxSol: { type: Number, default: 1 },
+      quantity: { type: Number, default: 1 },
+      attributes: { type: [Schema.Types.Mixed], default: [] },
+      fast: { type: Boolean, default: false },
+    },
+    notification1: {
+      enabled: { type: Boolean, required: true, default: false },
+      snipeType: { type: String, enum: ["sol", "percent"], default: "sol" },
+      minPercentage: { type: Number, default: 0 },
+      maxPercentage: { type: Number, default: 0 },
+      rankingEngines: { type: [String], default: ["absRank"] },
+      belowRank: { type: String },
+      minSol: { type: Number, default: 0 },
+      maxSol: { type: Number, default: 1 },
+      attributes: { type: [Schema.Types.Mixed], default: [] },
+      fast: { type: Boolean, default: false },
+    },
+    notification2: {
+      enabled: { type: Boolean, required: true, default: false },
+      snipeType: { type: String, enum: ["sol", "percent"], default: "sol" },
+      minPercentage: { type: Number, default: 0 },
+      maxPercentage: { type: Number, default: 0 },
+      rankingEngines: { type: [String], default: ["absRank"] },
+      belowRank: { type: String },
+      minSol: { type: Number, default: 0 },
+      maxSol: { type: Number, default: 1 },
+      attributes: { type: [Schema.Types.Mixed], default: [] },
+      fast: { type: Boolean, default: false },
+    },
+    notification3: {
+      enabled: { type: Boolean, required: true, default: false },
+      snipeType: { type: String, enum: ["sol", "percent"], default: "sol" },
+      minPercentage: { type: Number, default: 0 },
+      maxPercentage: { type: Number, default: 0 },
+      rankingEngines: { type: [String], default: ["absRank"] },
+      belowRank: { type: String },
+      minSol: { type: Number, default: 0 },
+      maxSol: { type: Number, default: 1 },
+      attributes: { type: [Schema.Types.Mixed], default: [] },
+      fast: { type: Boolean, default: false },
+    },
+  }
+  //   { strict: false, _id: false }
+);
+
+module.exports = mongoose.model("collection", Collection);
