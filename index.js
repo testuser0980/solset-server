@@ -4,7 +4,7 @@ const ConnectToMongoose = require("./dbConnection");
 const app = express();
 app.use(express.json());
 app.use(cors());
-const port = 6000;
+const port = process.env.PORT || 6000;
 
 ConnectToMongoose();
 
